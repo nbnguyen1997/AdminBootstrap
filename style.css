@@ -3,98 +3,154 @@
     padding: 0;
 }
 
+html {
+    font-size: 16px;
+    line-height: 1.15;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,800&display=swap');
 body {
     background: #f8f9fa;
+    font-family: 'Nunito', sans-serif;
 }
 
-ul {
-    display: block;
-    list-style-type: none;
-}
-
-nav {
-    background-color: #4e73df;
-    color: #fff;
-    height: 100vh;
-}
-
-.wrapper_nav>li {
-    padding: 10px 0px;
-    border-bottom: solid rgba(255, 255, 255, 0.2) 1px;
-}
-
-.display_flex {
+#wrapper {
     display: flex;
 }
 
-.list_item {
-    color: rgba(255, 255, 255, .5);
+.bg-gradient-primary {
+    background-color: #4e73df;
+    background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+    background-size: cover;
 }
 
-.list_item>ul>li {
+.sidebar {
+    width: 6.5rem;
+    min-height: 100vh;
+}
+
+.sidebar-dark .sidebar-brand {
     color: #fff;
-    margin-bottom: 10px;
-    margin-top: 5px;
 }
 
-.img_login {
-    width: 30px;
-    height: 30px;
+.sidebar .sidebar-brand {
+    height: 4.375rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    z-index: 1;
 }
 
-header {
-    padding: 20px 30px;
-    margin: 0 -15px;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, .2);
+.rotate-n-15 {
+    transform: rotate(-15deg);
 }
 
-.title {
-    justify-content: space-between;
-    margin: 10px;
+.sidebar .sidebar-brand .sidebar-brand-text {
+    display: none;
 }
 
-.shadow {
-    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15);
+.sidebar-dark hr.sidebar-divider {
+    border-top: 1px solid rgba(255, 255, 255, .15);
 }
 
-.fas {
-    margin: 10px;
+.sidebar hr.sidebar-divider {
+    margin: 0 1rem 1rem;
 }
 
-.card {
-    margin: 10px;
+.sidebar .nav-item {
+    position: relative;
 }
 
-.cards {
-    justify-content: space-around;
+.sidebar-dark .nav-item.active .nav-link i {
+    color: #fff;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
+.sidebar-dark .nav-item.active .nav-link {
+    color: #fff;
 }
 
-.chart1,
-.chart2 {
-    border: solid #f8f9fa 1px;
-    height: 60vh;
-    background-color: #fff;
-    box-shadow: rgba(216, 216, 216, 0.733);
-    margin: 10px;
+.sidebar .nav-item .nav-link {
+    text-align: center;
+    padding: .75rem 1rem;
+    width: 6.5rem;
 }
 
-.content {
-    display: grid;
-    grid-template-columns: 70% 30%;
+.sidebar .nav-item.active .nav-link {
+    font-weight: 700;
 }
 
-.item {
-    border-left: .25rem solid #4e73df;
+.sidebar .sidebar-heading {
+    color: rgba(255, 255, 255, .4);
+    text-align: center;
+    padding: 0 1rem;
+    font-weight: 800;
+    font-size: .65rem;
 }
 
-.card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.25rem;
+.sidebar-dark .nav-item .nav-link i {
+    color: rgba(255, 255, 255, .3);
+}
+
+.sidebar-dark .nav-item .nav-link {
+    color: rgba(255, 255, 255, .8);
+}
+
+.dropdown .dropdown-menu .dropdown-header,
+.sidebar .sidebar-heading,
+.text-uppercase {
+    text-transform: uppercase!important;
+}
+
+.fa-cog:before {
+    content: "\f013";
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 16rem!important;
+    }
+    .sidebar .sidebar-brand .sidebar-brand-text {
+        display: inline;
+    }
+    .sidebar .sidebar-brand .sidebar-brand-icon i {
+        font-size: 2rem;
+    }
+    .sidebar .nav-item .nav-link i {
+        font-size: .85rem;
+        margin-right: .25rem;
+    }
+    .sidebar .nav-item .nav-link span {
+        font-size: .85rem;
+        display: inline;
+    }
+    .sidebar .nav-item .nav-link {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+        width: 14rem;
+    }
+    .sidebar .sidebar-heading {
+        text-align: left;
+    }
+    .sidebar .nav-item .nav-link[data-toggle=collapse].collapsed::after {
+        content: '\f105';
+    }
+    .sidebar-dark .nav-item .nav-link[data-toggle=collapse]::after {
+        color: rgba(255, 255, 255, .5);
+    }
+    .sidebar .nav-item .nav-link[data-toggle=collapse]::after {
+        width: 1rem;
+        text-align: center;
+        float: right;
+        vertical-align: 0;
+        border: 0;
+        font-weight: 900;
+        content: '\f107';
+        font-family: 'Font Awesome 5 Free';
+    }
 }
