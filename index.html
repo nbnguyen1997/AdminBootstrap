@@ -14,7 +14,7 @@
 
 <body>
     <div class="wrapper">
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" role="navigation">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSiebar" role="navigation">
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
@@ -33,97 +33,84 @@
                 Interface
             </div>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#collapseTwo" data-toggle="collapse">
                     <i class="fas fa-fw fa-cog"> </i>
                     <span>Components</span>
                 </a>
-                <div class="collapse" id="collapseTwo">
+                <div class="collapse" id="collapseTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="#">Buttons</a>
+                        <a class="collapse-item" href="#">Cards</a>
+                    </div>
 
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="false">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Utilities</span>
+                </a>
+                <div class="collapse" id="collapseUtilities" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities</h6>
+                        <a class="collapse-item" href="#">Colors</a>
+                        <a class="collapse-item" href="#">Borders</a>
+                        <a class="collapse-item" href="#">Animatioins</a>
+                        <a class="collapse-item" href="#">Others</a>
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                addons
+            </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div class="collapse" id="collapsePages">
+                    <div class="bg-white py-2 collapse-inner rounded" data-parent="#accordionSidebar">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="#">Login</a>
+                        <a class="collapse-item" href="#">Register</a>
+                        <a class="collapse-item" href="#">Forgot Password</a>
+                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item" href="#">404 Page</a>
+                        <a class="collapse-item" href="#">Blank Page</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle">
+
+                </button>
+            </div>
+
         </ul>
         <div class="d-flex flex-column">
 
         </div>
     </div>
-    <!-- <div class="display_flex">
-        <nav class="col-2">
-            <ul class="wrapper_nav">
-                <li>
-                    <h5><i class="fas fa-laugh-wink"></i>SB ADMIN 2</h5>
-                </li>
-                <li><i class="fas fa-fw fa-tachometer-alt"></i> Dashbord
-                </li>
-                <li class="list_item">
-                    INTERFACE
-                    <ul>
-                        <li><i class="fas fa-fw fa-cog"></i>Components</li>
-                        <li><i class="fas fa-fw fa-wrench"></i>Utilities</li>
-                    </ul>
-                </li>
-                <li class="list_item">
-                    ADDONS
-                    <ul>
-                        <li><i class="fas fa-fw fa-folder"></i>Pages</li>
-                        <li><i class="fas fa-fw fa-chart-area"></i>Charts</li>
-                        <li><i class="fas fa-fw fa-table"></i>Tables</li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <main class="col-10">
-            <header class="display_flex shadow">
-                <div>
-                    <input type="search" name="search" id="search">
-                    <i class="fas fa-search fa-sm"></i>
-                </div>
-                <div class="login display_flex">
-                    <p>Login</p>
 
-                    <img class="img_login" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
-                </div>
-            </header>
-            <div class="wrapper_content">
-                <div class="title display_flex">
-                    <h2>Dashbord</h2>
-                    <button>Generate Report</button>
-                </div>
-
-                <div class="grid">
-                    <div class="card item shadow">
-                        <p>EARNINGS (MONTHLY)</p>
-                        <span>$40,000</span>
-                    </div>
-                    <div class="card item shadow">
-                        <div class="card-body">
-                            <p>EARNINGS (ANNUAL)</p>
-                            <span>$215,000</span>
-                        </div>
-                    </div>
-                    <div class="card item shadow">
-                        <p>TASKS</p>
-                        <span>50%</span>
-                    </div>
-                    <div class="card item shadow">
-                        <p>PENDING REQUESTS</p>
-                        <span>18</span>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="chart1 shadow">
-
-                    </div>
-                    <div class="chart2 shadow">
-
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div> -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="script.js"></script>
 
     <!-- jQuery library -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
