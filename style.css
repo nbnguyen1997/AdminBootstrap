@@ -203,6 +203,107 @@ body {
     background-color: rgba(255, 255, 255, .25);
 }
 
+
+/* CONTENT */
+
+#wrapper #content-wrapper #content {
+    flex: 1 0 auto;
+}
+
+#wrapper #content-wrapper {
+    background-color: #f8f9fc;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.shadow {
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15)!important;
+}
+
+.topbar {
+    height: 4.375rem;
+}
+
+.topbar #sidebarToggleTop {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.topbar .navbar-search {
+    width: 25rem;
+}
+
+.topbar .navbar-search input {
+    font-size: .85rem;
+    height: auto;
+}
+
+.topbar .dropdown .dropdown-menu {
+    width: calc(100% - 1.5rem);
+    right: .75rem;
+}
+
+.dropdown .dropdown-menu {
+    font-size: .85rem;
+}
+
+.animated--grow-in,
+.sidebar .nav-item .collapse {
+    -webkit-animation-name: growIn;
+    animation-name: growIn;
+    -webkit-animation-duration: .2s;
+    animation-duration: .2s;
+    -webkit-animation-timing-function: transform cubic-bezier(.18, 1.25, .4, 1), opacity cubic-bezier(0, 1, .4, 1);
+    animation-timing-function: transform cubic-bezier(.18, 1.25, .4, 1), opacity cubic-bezier(0, 1, .4, 1);
+}
+
+.dropdown-toggle::after {
+    content: "";
+    display: none;
+}
+
+.topbar .dropdown {
+    position: static;
+}
+
+.topbar.navbar-light .navbar-nav .nav-item .nav-link {
+    color: #d1d3e2;
+}
+
+.topbar .nav-item .nav-link {
+    height: 4.375rem;
+    display: flex;
+    align-items: center;
+    padding: 0 .75rem;
+}
+
+.sidebar .nav-item .nav-link,
+.topbar .nav-item .nav-link {
+    position: relative;
+}
+
+.sidebar .nav-item .nav-link .badge-counter,
+.topbar .nav-item .nav-link .badge-counter {
+    position: absolute;
+    transform: scale(.7);
+    transform-origin: top right;
+    right: .25rem;
+    margin-top: -.25rem;
+}
+
+.sidebar .nav-item .nav-link .img-profile,
+.topbar .nav-item .nav-link .img-profile {
+    height: 2rem;
+    width: 2rem;
+}
+
+
+/* table */
+
+div.table-responsive>div.dataTables_wrapper>div.row {
+    margin: 0;
+}
+
 @media (min-width: 768px) {
     .sidebar {
         width: 16rem!important;
@@ -267,5 +368,12 @@ body {
         text-align: center;
         padding: .75rem 1rem;
         width: 6.5rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .topbar .dropdown .dropdown-menu {
+        width: auto;
+        right: 0;
     }
 }
