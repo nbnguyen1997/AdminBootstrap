@@ -298,6 +298,19 @@ body {
 }
 
 
+/* content dashboard */
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
 /* table */
 
 div.table-responsive>div.dataTables_wrapper>div.row {
