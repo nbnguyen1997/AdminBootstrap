@@ -14,7 +14,7 @@
 
 <body>
     <div id="wrapper">
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSiebar" role="navigation">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" role="navigation">
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
@@ -33,7 +33,7 @@
                 Interface
             </div>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#collapseTwo" data-toggle="collapse">
+                <a class="nav-link collapsed" href="#collapseTwo" data-target="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"> </i>
                     <span>Components</span>
                 </a>
@@ -350,6 +350,53 @@
                         </div>
                         <!-- end cards monthly  -->
                     </div>
+                    <!-- chart  -->
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex flex-row align-items-center justify-content-between py-3">
+                                    <h6 class="font-weight-bold m-0 text-primary">Earnings Overview</h6>
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" id="dropdownMenuLinkLeft" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-muted"></i>
+                                        </a>
+                                        <div class="dropdown-menu shadow dropdown-menu-right">
+                                            <div class="dropdown-header">Dropdown Header</div>
+                                            <a href="#" class="dropdown-item">Action</a>
+                                            <a href="#" class="dropdown-item">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#" class="dropdown-item">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body" style="height: 30rem;">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex flex-row align-items-center justify-content-between py-3">
+                                    <h6 class="font-weight-bold m-0 text-primary">Revenue Sources</h6>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenuLinkRight" role="button" aria-expanded="false" aria-haspopup="true">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-muted"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <div class="dropdown-header">dropdown header</div>
+                                            <a href="#" class="dropdown-item">Action</a>
+                                            <a href="#" class="dropdown-item">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#" class="dropdown-item">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body" style="height: 30rem;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- end container-fluid -->
             </div>
@@ -359,7 +406,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 
     <!-- jQuery library -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
