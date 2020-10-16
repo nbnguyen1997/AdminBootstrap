@@ -310,6 +310,30 @@ body {
     padding-right: 1.5rem;
 }
 
+.border-left-primary {
+    border-left: .25rem solid #4e73df;
+}
+
+.border-left-info {
+    border-left: .25rem solid #36b9cc;
+}
+
+.border-left-success {
+    border-left: 0.25rem solid #28a745;
+}
+
+.border-left-warning {
+    border-left: .25rem solid #ffc107;
+}
+
+.card {
+    border-radius: .35rem !important;
+}
+
+.text-xs {
+    font-size: 0.7rem;
+}
+
 
 /* table */
 
