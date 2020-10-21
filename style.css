@@ -14,6 +14,16 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+[class^="col"] {
+    padding-right: .75rem;
+    padding-left: .75rem;
+}
+
+.row {
+    margin-right: -.75rem;
+    margin-left: -.75rem;
+}
+
 #wrapper {
     display: flex;
 }
@@ -27,6 +37,11 @@ body {
 .sidebar {
     width: 6.5rem;
     min-height: 100vh;
+}
+
+.sidebar.toggled {
+    width: 0!important;
+    overflow: hidden;
 }
 
 .sidebar-dark .sidebar-brand {
@@ -366,9 +381,25 @@ div.dataTables_wrapper div.dataTables_filter label {
     text-align: left;
 }
 
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: right;
+}
+
+.dataTables_filter input {
+    outline: none;
+    border-radius: .35rem;
+    margin-left: 0.5em;
+    display: inline-block;
+    width: auto;
+}
+
 @media (min-width: 768px) {
     .sidebar {
         width: 16rem!important;
+    }
+    .sidebar.toggled {
+        overflow: visible;
+        width: 6.5rem!important;
     }
     .sidebar .sidebar-brand .sidebar-brand-text {
         display: inline;
@@ -383,6 +414,13 @@ div.dataTables_wrapper div.dataTables_filter label {
     .sidebar .nav-item .nav-link span {
         font-size: .85rem;
         display: inline;
+    }
+    .sidebar.toggled .nav-item .nav-link span {
+        font-size: .65rem;
+        display: block;
+    }
+    .sidebar.toggled .nav-item .nav-link::after {
+        display: none;
     }
     .sidebar .nav-item .nav-link {
         display: block;
@@ -410,6 +448,15 @@ div.dataTables_wrapper div.dataTables_filter label {
         font-weight: 900;
         content: '\f107';
         font-family: 'Font Awesome 5 Free';
+    }
+    .sidebar.toggled #sidebarToggle::after {
+        content: '\f105';
+        font-family: 'Font Awesome 5 Free';
+        margin-left: .25rem;
+    }
+    .sidebar.toggled {
+        width: 0!important;
+        overflow: hidden;
     }
     .sidebar .nav-item .collapse,
     .sidebar .nav-item .collapsing {
